@@ -28,7 +28,7 @@
       },
       "ZENATON_LISTEN_ARGS": {
         "description": "The Zenaton Agent listen args",
-        "value": "--boot=worker/boot.js --node",
+        "value": "--boot=boot.js --node",
         "required": true
       }
     },
