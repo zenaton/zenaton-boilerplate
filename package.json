@@ -1,0 +1,11 @@
+{
+  "name": "marketing-workflows",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/zenaton/marketing-workflows.git",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "zenaton": "^0.7.0"
+  }
+}
