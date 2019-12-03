@@ -4,16 +4,16 @@ Click this button [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https
 
 Check that your agent is running properly here: https://app.zenaton.com/agents
 
-Locally, start an agent in client-mode to launch workflow
+Then, to launch a workflow from your computer:
 
+install dependencies (only the first time)
 ```
-zenaton start
-zenaton listen --boot=boot.js --node --client
+yarn
 ```
 
-Launch a workflow
+and then launch a workflow
 ```
-node launch.js
+node bin/launch.js
 ```
 
 
