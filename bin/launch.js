@@ -1,4 +1,4 @@
-const client = require('./client');
+const client = require('../client');
 
 const workflow_id = 123;
 const params = { name: 'foo' };
