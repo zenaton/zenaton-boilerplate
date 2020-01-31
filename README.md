@@ -20,19 +20,15 @@ node bin/launch.js
 
 ## Run with docker
 
-Install dependencies.
-```
-yarn
-```
-
-Fill-in your credentials
+Create your .env
 ```
 cp .env.sample .env
 ```
+...and fill-in your credentials.
 
-Start your Agent
+Start Zenaton
 ```
-docker-compose up
+cd docker && docker-compose up
 ```
 
 Check that your agent is running properly here: https://app.zenaton.com/agents
