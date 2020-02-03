@@ -2,7 +2,8 @@
 const { workflow, task } = require('zenaton');
 
 // define tasks
-task("myFirstTask", require("./tasks/myFirstTask"));
+task("GetSentence", require("./tasks/getSentence"));
+task("LogSentence", require("./tasks/logSentence"));
 
 // define workflows
-workflow("myFirstWorkflow", require("./workflows/myFirstWorkflow"));
+workflow("HelloWorld", require("./workflows/helloWorld"));
