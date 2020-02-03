@@ -1,11 +1,13 @@
 {
-  "name": "marketing-workflows",
+  "name": "zenaton-boilerplate",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/zenaton/marketing-workflows.git",
+  "repository": "https://github.com/zenaton/zenaton-boilerplate.git",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "zenaton": "^0.7.0"
+    "zenaton": "^0.8.0"
+  },
+  "scripts": {
+    "postinstall": "cp -n .env.sample $INIT_CWD/.env || :"
   }
 }

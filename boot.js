@@ -1,12 +1,9 @@
 // load dependencies
-const { workflow, task } = require('zenaton')
+const { workflow, task } = require('zenaton');
 
-// load definitions
-const MyFirstWorkflow = require("./Workflows/MyFirstWorkflow")
-const MyFirstTask = require("./Tasks/MyFirstTask")
-const LogTask = require("./Tasks/LogTask")
+// define tasks
+task("GetSentence", require("./tasks/getSentence"));
+task("LogSentence", require("./tasks/logSentence"));
 
-// apply definitions
-workflow("MyFirstWorkflow", MyFirstWorkflow)
-task("MyFirstTask", MyFirstTask)
-task("LogTask", LogTask)
+// define workflows
+workflow("HelloWorld", require("./workflows/helloWorld"));
