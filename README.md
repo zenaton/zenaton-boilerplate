@@ -32,8 +32,6 @@ and run it:
 zenaton listen --boot=boot.js
 ````
 
-Check that your agent is running properly here: https://app.zenaton.com/agents
-
 ### Run in Docker
 
 Create your `.env` file
@@ -47,15 +45,16 @@ Then start your container:
 cd docker && docker-compose up
 ```
 
-Check that your agent is running properly here: https://app.zenaton.com/agents
-
 ### Run on Heroku
 
 Follow this button [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy), then fill in the env variables and click "deploy".
 
-Check that your agent is running properly here: https://app.zenaton.com/agents
+### Run somewhere else
 
+Check our [documentation](https://docs.zenaton.com/going-to-production/) for more options (AWS, Google Cloud, Clever Cloud ...)
 
+### Checking that your project is running
+Whatever your installation method, you should see that a new Agent is listening from this url: https://app.zenaton.com/agents (if you do not see it, please check again that you have selected the right application and environment).
 
 ## Dispatching Tasks and Workflows
 
@@ -76,4 +75,4 @@ You can use also the UI of our [example app](https://github.com/zenaton/nodejs-e
 
 ## Monitoring Tasks and Worklows Processing
 
-Look at your [dashboard](https://app.zenaton.com/workflows) (if you do not see your dispatched tasks or workflows, please check that your have selected the right application and environment).
+Look at your [dashboard](https://app.zenaton.com/workflows) (if you do not see your dispatched tasks or workflows, please check that you have selected the right application and environment).
