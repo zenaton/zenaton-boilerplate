@@ -33,10 +33,6 @@
       }
     },
     "formation": {
-      "web": {
-        "quantity": 1,
-        "size": "free"
-      },
       "zenatonworker": {
         "quantity": 1,
         "size": "free"
