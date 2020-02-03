@@ -1,5 +1,4 @@
-FROM node:stretch
-
+FROM node:12.14.1-stretch
 RUN apt-get update && apt-get install -y curl
 
 WORKDIR /app
