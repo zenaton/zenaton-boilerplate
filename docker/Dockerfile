@@ -1,12 +1,12 @@
-FROM node:12.14.1-stretch
-RUN apt-get update && apt-get install -y curl
+FROM node:12.14-stretch
 
 WORKDIR /app
 
-COPY tasks ./tasks
-COPY workflows ./workflows
-COPY boot.js  .
-COPY package.json .
+COPY package.json yarn.lock ./
+
+RUN yarn --frozen-lockfile
+
+COPY . .
 
 # Install Zenaton
 RUN curl https://install.zenaton.com | sh

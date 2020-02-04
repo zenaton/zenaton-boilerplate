@@ -2,13 +2,12 @@
 
 set -e
 
-# Make sure dependencies are installed
-yarn
+yarn --frozen-lockfile
 
 # Start zenaton agent
 zenaton start
 zenaton listen --env=.env --boot=boot.js
 
 # Log agent output
-touch zenaton.out
-tail -f zenaton.out
+touch zenaton.out zenaton.err
+tail -f zenaton.*
