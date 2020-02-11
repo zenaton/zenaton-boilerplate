@@ -58,9 +58,39 @@ Whatever your installation method, you should see that a new Agent is listening 
 
 ## Dispatching Tasks and Workflows
 
-Tasks and workflows can be dispatched  by name from everywhere using the [Zenaton API](https://docs.zenaton.com/client/graphql-api/) or our [Node.js SDK](https://github.com/zenaton/zenaton-node).
+### Using Zenaton API 
+Tasks and workflows can be dispatched by name from everywhere using the [Zenaton API](https://docs.zenaton.com/client/graphql-api/) or our [Node.js SDK](https://github.com/zenaton/zenaton-node).
 
-You can use also the UI of our [example app](https://github.com/zenaton/nodejs-example-app). After installation, you can (optionaly) add your workflows and some examples of input and event in the `public/config.json` file. eg.
+You can test it from your command line interface:
+
+Dispatching a "<WORKFLOW NAME>" workflow: 
+
+````bash
+curl -X POST https://gateway.zenaton.com/graphql \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer <API_TOKEN> \
+  -d '{"query":"mutation($input: DispatchWorkflowInput!) { dispatchWorkflow(input: $input) { id } }","variables":{"input":{"appId":"<APP_ID>","environment":"dev","name":"<WORKFLOW NAME>","input":"[...<WORKFLOW INPUT>]"}}}'
+````
+
+> Do not forget to replace `<APP_ID>` and `<API_TOKEN>` by your Zenaton AppId and api token. 
+
+Sending a "<EVENT NAME>" event to this workflow:
+
+````bash
+curl -X POST https://gateway.zenaton.com/graphql \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer <API_TOKEN> \
+  -d '{"query":"mutation($input: SendEventToWorkflowsInput!) { sendEventToWorkflows(input: $input) { status } }","variables":{"input":{"appId":"<APP_ID>","environment":"dev","name":"<EVENT NAME>","data":"[...<EVENT DATA>]","selector":{"id":"<WORKFLOW_ID>"}}}}'
+````
+
+> Do not forget to replace `<APP_ID>` and `<API_TOKEN>` by your Zenaton AppId and api token. And <WORKFLOW_ID> by your workflow's id that you have received when dispatched.
+
+### Example App 
+
+We have provided an [example app](https://github.com/zenaton/nodejs-example-app) with basic UI to dispatch workflows and events with associated data to your Zenaton project. After installation, you can (optionaly) add your workflows and some examples of input and event in the `public/config.json` file. eg.
+
 ````json
 {
   "workflows": [
