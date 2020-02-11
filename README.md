@@ -63,7 +63,7 @@ Tasks and workflows can be dispatched by name from everywhere using the [Zenaton
 
 You can test it from your command line interface:
 
-Dispatching a "<WORKFLOW NAME>" workflow: 
+Dispatching a `"<WORKFLOW NAME>"` workflow: 
 
 ````bash
 curl -X POST https://gateway.zenaton.com/graphql \
@@ -75,7 +75,7 @@ curl -X POST https://gateway.zenaton.com/graphql \
 
 > Do not forget to replace `<APP_ID>` and `<API_TOKEN>` by your Zenaton AppId and api token. 
 
-Sending a "<EVENT NAME>" event to this workflow:
+Sending a `"<EVENT NAME>"` event to this workflow:
 
 ````bash
 curl -X POST https://gateway.zenaton.com/graphql \
