@@ -25,11 +25,6 @@
         "description": "The Zenaton environment",
         "value": "dev",
         "required": true
-      },
-      "ZENATON_LISTEN_ARGS": {
-        "description": "The Zenaton Agent listen args",
-        "value": "--boot=boot.js --node",
-        "required": true
       }
     },
     "formation": {
