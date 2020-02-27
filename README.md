@@ -81,7 +81,7 @@ Sending a `"<EVENT NAME>"` event to this workflow:
 curl -X POST https://gateway.zenaton.com/graphql \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
-  -H "Authorization: Bearer <API_TOKEN> \
+  -H "Authorization: Bearer <API_TOKEN>" \
   -d '{"query":"mutation($input: SendEventToWorkflowsInput!) { sendEventToWorkflows(input: $input) { status } }","variables":{"input":{"appId":"<APP_ID>","environment":"dev","name":"<EVENT NAME>","data":"[...<EVENT DATA>]","selector":{"id":"<WORKFLOW_ID>"}}}}'
 ````
 
