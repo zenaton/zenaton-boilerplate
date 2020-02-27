@@ -69,7 +69,7 @@ Dispatching a `"<WORKFLOW NAME>"` workflow:
 curl -X POST https://gateway.zenaton.com/graphql \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
-  -H "Authorization: Bearer <API_TOKEN> \
+  -H "Authorization: Bearer <API_TOKEN>" \
   -d '{"query":"mutation($input: DispatchWorkflowInput!) { dispatchWorkflow(input: $input) { id } }","variables":{"input":{"appId":"<APP_ID>","environment":"dev","name":"<WORKFLOW NAME>","input":"[...<WORKFLOW INPUT>]"}}}'
 ````
 
