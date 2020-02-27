@@ -70,7 +70,17 @@ curl -X POST https://gateway.zenaton.com/graphql \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
   -H "Authorization: Bearer <API_TOKEN>" \
-  -d '{"query":"mutation($input: DispatchWorkflowInput!) { dispatchWorkflow(input: $input) { id } }","variables":{"input":{"appId":"<APP_ID>","environment":"dev","name":"<WORKFLOW NAME>","input":"[...<WORKFLOW INPUT>]"}}}'
+  -d '{
+      "query":"mutation($input: DispatchWorkflowInput!) { dispatchWorkflow(input: $input) { id } }",
+      "variables":{
+        "input":{
+          "appId":"<APP_ID>",
+          "environment":"dev",
+          "name":"<WORKFLOW NAME>",
+          "input":"[...<WORKFLOW INPUT>]"
+        }
+      }
+    }'
 ````
 
 > Do not forget to replace `<APP_ID>` and `<API_TOKEN>` by your Zenaton AppId and api token. 
@@ -82,7 +92,18 @@ curl -X POST https://gateway.zenaton.com/graphql \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
   -H "Authorization: Bearer <API_TOKEN>" \
-  -d '{"query":"mutation($input: SendEventToWorkflowsInput!) { sendEventToWorkflows(input: $input) { status } }","variables":{"input":{"appId":"<APP_ID>","environment":"dev","name":"<EVENT NAME>","data":"[...<EVENT DATA>]","selector":{"id":"<WORKFLOW_ID>"}}}}'
+  -d '{
+      "query":"mutation($input: SendEventToWorkflowsInput!) { sendEventToWorkflows(input: $input) { status } }",
+      "variables":{
+        "input":{
+          "appId":"<APP_ID>",
+          "environment":"dev",
+          "name":"<EVENT NAME>",
+          "data":"[...<EVENT DATA>]",
+          "selector":{"id":"<WORKFLOW_ID>"}
+        }
+      }
+    }'
 ````
 
 > Do not forget to replace `<APP_ID>` and `<API_TOKEN>` by your Zenaton AppId and api token. And <WORKFLOW_ID> by your workflow's id that you have received when dispatched.
