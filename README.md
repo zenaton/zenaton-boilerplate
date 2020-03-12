@@ -49,7 +49,7 @@ cd docker && docker-compose up
 
 Follow this button [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy), then fill in the env variables and click "deploy".
 
-### Run somewhere else
+### Run on other hosting options
 
 Check our [documentation](https://docs.zenaton.com/going-to-production/) for more options (AWS, Google Cloud, Clever Cloud ...)
 
