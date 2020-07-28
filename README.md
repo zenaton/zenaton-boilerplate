@@ -1,3 +1,5 @@
+> ⚠️ This repository is abandoned.
+
 # Zenaton Project Boilerplate
 
 This is an example of Zenaton project. It can be used as a starter to your own project. 
